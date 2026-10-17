@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrunkleCrow</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+
+<h1>This is Drunkle Crow.</h1>
+<p>(He's an alcoholic.)</p>
+
+<img src="{{url_for('static', filename='images/BadBirdie.jpg')}}" alt="Image of Drunkle Crow" class="crow-image">
+
+<p>Like most birds, he has a natural understanding of the seasons, but his drinking sometimes interferes.</p>
+<p>Feel free to check what time of year he thinks it is, and see if he's right!</p>
+
+<div class="navigation">
+    <a href="{{url_for('seasons')}}">Ask Drunkle Crow what season it is!</a>
+</div>
+
+<div class="navigation">
+    <a href="{{url_for('corvidcopia')}}">CAAAWW!</a>
+</div>
+
+<div class="ravegation">
+    <a href="{{url_for('ravens')}}">Raven</a>
+</div>
+
+<div class="navigation">
+    <a href="{{url_for('about')}}">More</a>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+
+{% extends 'base.html' %}
+
+
+{%block content%}
+    
+    <h1>"Wassat?? Season?! Listen 'ere!"</h1>
+
+    <p>"The year is...uh...carry the 3....it's {{year}}!"</p>
+    <p>"And the month! The month is....is...uh...{{month}}...?"</p>
+    <p>"Yeah, it's {{month}}! So:"</p>
+
+
+    {% if month in ["March", "April", "May"] %}
+        <p>"It's Spring! Hopefully you don't have allergies! Fall in love, go cry, I dunno!"</p>
+        <img src="{{url_for('static', filename='images/SpringCrow.jpg')}}" alt="Bird Blossom" class="crow-image">
+    {% elif month in ["June", "July", "August"] %}
+        <p>"It's Summer! What are you doing on a computer? Go live a little!"</p>
+        <img src="{{url_for('static', filename='images/SummerCrow.jpeg')}}" alt="Summer Soaring" class="crow-image">
+    {% elif month in ["September", "October", "Novemeber"] %}
+        <p>"It's Autumn! The best season. Oktoberfest and a good book's all I need!"</p>
+        <img src="{{url_for('static', filename='images/AutumnCrow.avif')}}" alt="Best Bird" class="crow-image">
+    {% else %}
+        <p>"It's Winter, hope you like scarves! Because it's as cold out there as my ex-wife's chest cavity!"</p>
+        <p>"CUZ SHE AIN'T GOT NO HEART!!"</p>
+        <img src="{{url_for('static', filename='images/WinterCrow.jpg')}}" alt="Cold Corvids" class="crow-image">
+
+    {% endif %}
+
+{% endblock content %}
