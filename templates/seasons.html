@@ -1,0 +1,25 @@
+
+
+{% extends 'base.html' %}
+
+
+{%block content%}
+    
+    <h1>Welcome</h1>
+
+    <p>The current year is {{year}}</p>
+    <p>The current month is {{month}}</p>
+
+
+    {% if month in ["March", "April", "May"] %}
+    <p>It's Spring! Hopefull.y you don't have allergies!</p>
+    {% elif month in ["June", "July", "August"] %}
+    <p>It's Summer! What are you doing on a computer? Go live a little!</p>
+    {% elif month in ["September", "October", "Novemeber"] %}
+    <p>It's Autumn! The best season.</p>
+    {% else %}
+        <p>It's Winter, hope you like scarves!</p>
+
+    {% endif %}
+
+{% endblock content %}
